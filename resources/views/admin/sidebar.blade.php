@@ -1,14 +1,16 @@
 <div class="col-md-3">
     <div class="card">
         <div class="card-header">
-            Sidebar
+            MENU
         </div>
 
         <div class="card-body">
+           
+            </ul>
             <ul class="nav" role="tablist">
                 <li role="presentation">
-                    <a href="{{ url('/admin') }}">
-                        Dashboard
+                    <a href="{{ url('/admin/phone') }}">
+                        เบอร์
                     </a>
                 </li>
             </ul>
