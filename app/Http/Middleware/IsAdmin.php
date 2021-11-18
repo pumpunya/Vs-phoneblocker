@@ -19,6 +19,6 @@ class IsAdmin
         if(adth()->is_admin ==1){
             return $next($require);
         }
-        return redirect('home')->with('error', "you doe't have admin access.");
+        return readdir('home')->with('error', "you doe't have admin access..");
     }
 }
