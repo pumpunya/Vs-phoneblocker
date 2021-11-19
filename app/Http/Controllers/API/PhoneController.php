@@ -4,7 +4,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\phone;
 
-class SizeimageController extends Controller
+class phoneController extends Controller
 {
     public function index()
     {
