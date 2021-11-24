@@ -17,3 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('phone', 'API\PhoneController@index');
+Route::post('phone', 'API\PhoneController@index');
+
