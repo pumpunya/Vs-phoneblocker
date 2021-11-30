@@ -32,12 +32,10 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-<<<<<<< HEAD
 Route::resource('admin/phone', 'Admin\phoneController');
 Route::resource('admin/phone', PhoneController::class);
 Route::resource('admin/phone', 'Admin\PhoneController');
 Route::resource('admin/reportnumber', 'Admin\reportnumberController');
-=======
 
 Route::resource('admin/phone', 'Admin\PhoneController');
->>>>>>> eb16332f61daa96cd530e196c1334305a6c7a8e9
+Route::resource('admin/reportnumber', 'Admin\ReportnumberController');

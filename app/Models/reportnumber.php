@@ -11,7 +11,7 @@ class reportnumber extends Model
      *
      * @var string
      */
-    protected $table = 'reportnumbers';
+    protected $table = 'reportnumber';
 
     /**
     * The database primary key value.

@@ -21,3 +21,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::get('phone', 'API\PhoneController@index');
 Route::post('phone', 'API\PhoneController@index');
 
+Route::get('reportnumber', 'API\ReportnumberController@index');
+Route::post('reportnumber', 'API\ReportnumberController@index');
