@@ -1,8 +1,9 @@
-<div class="form-group {{ $errors->has('id') ? 'has-error' : ''}}">
+<!--<div class="form-group {{ $errors->has('id') ? 'has-error' : ''}}">
     <label for="id" class="control-label">{{ 'Id' }}</label>
     <input class="form-control" name="id" type="number" id="id" value="{{ isset($reportnumber->id) ? $reportnumber->id : ''}}" >
     {!! $errors->first('id', '<p class="help-block">:message</p>') !!}
 </div>
+-->
 <div class="form-group {{ $errors->has('address') ? 'has-error' : ''}}">
     <label for="address" class="control-label">{{ 'Address' }}</label>
     <input class="form-control" name="address" type="text" id="address" value="{{ isset($reportnumber->address) ? $reportnumber->address : ''}}" >

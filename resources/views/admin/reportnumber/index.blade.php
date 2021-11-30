@@ -30,14 +30,17 @@
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th>#</th><th>Id</th><th>Address</th><th>Detail</th><th>Actions</th>
+                                       <th>Id</th><th>Address</th><th>Detail</th><th>Status</th><th>Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                 @foreach($reportnumber as $item)
                                     <tr>
-                                        <td>{{ $loop->iteration }}</td>
-                                        <td>{{ $item->id }}</td><td>{{ $item->address }}</td><td>{{ $item->detail }}</td>
+                                       
+                                        <td>{{ $item->id }}</td>
+                                        <td>{{ $item->address }}</td>
+                                        <td>{{ $item->detail }}</td>
+                                        <td>{{ $item->status }}</td>
                                         <td>
                                             <a href="{{ url('/admin/reportnumber/' . $item->id) }}" title="View reportnumber"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a>
                                             <a href="{{ url('/admin/reportnumber/' . $item->id . '/edit') }}" title="Edit reportnumber"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button></a>

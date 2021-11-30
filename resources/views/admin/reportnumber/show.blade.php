@@ -25,9 +25,12 @@
                             <table class="table">
                                 <tbody>
                                     <tr>
-                                        <th>ID</th><td>{{ $reportnumber->id }}</td>
+                                        
                                     </tr>
-                                    <tr><th> Id </th><td> {{ $reportnumber->id }} </td></tr><tr><th> Address </th><td> {{ $reportnumber->address }} </td></tr><tr><th> Detail </th><td> {{ $reportnumber->detail }} </td></tr>
+                                    <tr><th> Id </th><td> {{ $reportnumber->id }} </td></tr>
+                                    <tr><th> Address </th><td> {{ $reportnumber->address }} </td></tr>
+                                    <tr><th> Detail </th><td> {{ $reportnumber->detail }} </td></tr>
+                                    <tr><th> Satus </th><td> {{ $reportnumber->status }} </td></tr>
                                 </tbody>
                             </table>
                         </div>
