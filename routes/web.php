@@ -35,3 +35,4 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::resource('admin/phone', 'Admin\phoneController');
 Route::resource('admin/phone', PhoneController::class);
 Route::resource('admin/phone', 'Admin\PhoneController');
+Route::resource('admin/reportnumber', 'Admin\reportnumberController');
