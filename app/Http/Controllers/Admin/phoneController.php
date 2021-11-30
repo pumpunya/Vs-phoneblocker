@@ -24,9 +24,10 @@ class phoneController extends Controller
             $phone = phone::where('id', 'LIKE', "%$keyword%")
                 ->orWhere('phonenumber', 'LIKE', "%$keyword%")
                 ->orWhere('name', 'LIKE', "%$keyword%")
-                ->latest()->paginate($perPage);
+                ->oldest()->paginate($perPage);
+               
         } else {
-            $phone = phone::latest()->paginate($perPage);
+            $phone = phone::oldest()->paginate($perPage);
         }
 
         return view('admin.phone.index', compact('phone'));
