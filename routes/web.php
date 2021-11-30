@@ -32,6 +32,5 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::resource('admin/phone', 'Admin\phoneController');
-Route::resource('admin/phone', PhoneController::class);
+
 Route::resource('admin/phone', 'Admin\PhoneController');
