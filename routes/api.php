@@ -23,3 +23,6 @@ Route::post('phone', 'API\PhoneController@index');
 
 Route::get('reportnumber', 'API\ReportnumberController@index');
 Route::post('reportnumber', 'API\ReportnumberController@index');
+
+Route::post('AddReport', 'API\ReportnumberController@AddReport');
+Route::post('AddNumber', 'API\ReportnumberController@AddNumber');
