@@ -6,12 +6,12 @@
 }
 
 .carousel-image-1{
-    background-image: url('images/A1.jpg');
+    background-image: url('image/A1.jpg');
     background-size: cover;
 }
 
 .carousel-image-2{
-    background-image: url('images/A2.jpg');
+    background-image: url('image/A2.jpg');
     background-size: cover;
 }
 
@@ -19,7 +19,7 @@
 #about{
     min-height: 200px;
     position: relative;
-    background-image: url("image/iceland-5586225_1280.jpg");
+    background-image: url("image/A1.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     text-align: center;

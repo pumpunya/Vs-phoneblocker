@@ -1,17 +1,19 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <title>Phoneblocker</title>
-
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
-      
-       
-    </head>
-    <body >
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHONEBLOCKER</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- สร้างเมนู -->
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
         <div class="container">
             <a href="" class="navbar-brand">PHONEBLOCKER</a>
@@ -21,13 +23,24 @@
             <div id="navbar1" class="collapse navbar-collapse">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
+                        
                         <a href="login" class="nav-link">Login</a>
                     </li>
                     <li class="nav-item">
-                        <a href="register" class="nav-link">register</a>
+                    <a href="register" class="nav-link">register</a>
                     </li>
- <!-- การสร้าง Slider -->
- <section id="slider">
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link">เกี่ยวกับเรา</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="modal" data-bs-target="#myModal">ติดต่องาน</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- การสร้าง Slider 
+    <section id="slider">
          <div class="carousel slide" data-bs-ride="carousel" id="mySlider">
              <ol class="carousel-indicators">
                  <button data-bs-target="#mySlider" data-bs-slide-to="0" class="active"></button>
@@ -39,7 +52,7 @@
                      <div class="container">
                          <div class="carousel-caption d-none d-sm-block">
                              <h1 class="display-3">พระอาทิตย์ตกดิน</h1>
-                             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni asperiores impedit iste velit. Tenetur nostrum voluptatum quod obcaecati quisquam animi?</p>
+                             <p>test1</p>
                          </div>
                      </div>
                  </div>
@@ -47,31 +60,139 @@
                     <div class="container">
                         <div class="carousel-caption d-none d-sm-block">
                             <h1 class="display-3">ดอกทานตะวัน</h1>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni asperiores impedit iste velit. Tenetur nostrum voluptatum quod obcaecati quisquam animi?</p>
+                            <p>test2</p>
                         </div>
                     </div>
                  </div>
-
-
-       
-        </div>
-    </body>
-  <!--  <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
-            @if (Route::has('login'))
-                <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-                    @auth
-                        <a href="{{ url('/home') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Home</a>
-                    @else
-                        <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Login</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
-                        @endif
-                    @endauth
+                
+                 <button class="carousel-control-prev" data-bs-target="#mySlider" data-bs-slide="prev">
+                     <span class="carousel-control-prev-icon"></span>
+                 </button>
+                 <button class="carousel-control-next" data-bs-target="#mySlider" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+             </div>
+         </div>
+    </section>
+-->
+    <!-- Service Section -->
+    <br>
+    <br><br>
+    <br><br>
+    
+    <section id="service" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 text-center mb-4">
+                
+                <img src="https://cdn-icons.flaticon.com/png/512/2574/premium/2574172.png?token=exp=1638431117~hmac=e7d9dcb14e68fb012232fc435127cee1" width= 80 height=100 class="img-fluid">
+                    <!--<i class="fas fa-user-tie fa-3x mb-2"></i>-->
+                    <h2>บล็อกเบอร์</h2>
+                    <p>สามารถบล็อกเบอร์โทรศัพท์และกดรายงานได้</p>
                 </div>
-            @endif
+                <div class="col-md-4 text-center mb-4">
+                <img src="https://cdn-icons-png.flaticon.com/512/1688/1688988.png" width= 80 height=100 class="img-fluid">
 
+                    <h2>ฐานข้อมูลหมายเลข</h2>
+                    <p>สามารถอัปเดทข้อมูลหมายเลขได้ด้วยตนเอง</p>
+                </div>
+                <div class="col-md-4 text-center mb-4">
+                <img src="https://cdn-icons.flaticon.com/png/512/2574/premium/2574043.png?token=exp=1638432847~hmac=a1d921287f344c7ff9cd3b1b027567df" width= 80 height=100 class="img-fluid">
+                    <h2>บล็อกข้อมความ</h2>
+                    <p>สามารถบล็อกข้อความได้</p>
                 </div>
             </div>
--->
+        </div>
+    </section>
+    <!-- about -->
+
+
+    <section id="about" class="p-5">
+        <div class="dark-overlay">
+            <div class="row">
+                <div class="col">
+                    <div class="container text-center pt-5">
+                        <h1>เกี่ยวกับเรา</h1>
+                        <p>บล็อกเบอร์โทรและข้อความ</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- gallary -->
+    <section id="gallary" class="p-5">
+        <div class="container">
+            <h1 class="text-center">ผลงานของเรา</h1>
+            <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus magni earum tenetur quis nemo amet nihil doloremque ducimus atque tempore, quos blanditiis soluta repellendus! Mollitia quo cumque atque repellendus sunt.</p>
+            <!-- Image -->
+            <div class="row mb-4">
+                <div class="col-md-4">
+                    <img src="https://img.lovepik.com/photo/50062/6892.jpg_wh860.jpg" class="img-fluid">
+                </div>
+                <div class="col-md-4">
+                    <img src="https://cdn.pixabay.com/photo/2021/01/27/07/19/book-5953965__340.jpg" class="img-fluid">
+                </div>
+                <div class="col-md-4">
+                    <img src="https://cdn.pixabay.com/photo/2021/02/10/13/20/wren-6002068__340.jpg" class="img-fluid">
+                </div>
+            </div>
+            <div class="row mb-4">
+                <div class="col-md-4">
+                    <img src="https://cdn.pixabay.com/photo/2021/02/02/21/20/sea-5975484__340.jpg" class="img-fluid">
+                </div>
+                <div class="col-md-4">
+                    <img src="https://cdn.pixabay.com/photo/2021/02/08/15/02/mountains-5995081__340.jpg" class="img-fluid">
+                </div>
+                <div class="col-md-4">
+                    <img src="https://cdn.pixabay.com/photo/2021/02/07/19/57/gazelle-5992510__340.jpg" class="img-fluid">
+                </div>
+            </div>
+           
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="text-center p-4">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <p>Copyright &copy; Comsci Rmutto 2021</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">ติดต่องาน</h5>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label>อีเมล</label>
+                            <input type="email" placeholder="ป้อนอีเมลของคุณ" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>หัวข้อ</label>
+                            <input type="text" placeholder="เสนอหัวข้องานของคุณ" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>รายละเอียด</label>
+                            <textarea id="" cols="30" rows="10" class="form-control"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" data-bs-dismiss="modal">ยกเลิก</button>
+                    <button class="btn btn-success">ส่งข้อมูล</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
 </html>
