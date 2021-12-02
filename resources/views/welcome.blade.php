@@ -17,7 +17,9 @@
     <!-- สร้างเมนู -->
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
         <div class="container">
+   
             <a href="" class="navbar-brand">PHONEBLOCKER</a>
+            <img src="image/logo.png" width="50" height="50"  alt="center" >
             <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar1">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -32,6 +34,8 @@
                     </li>
                     <li class="nav-item">
                         <a href="#about" class="nav-link">เกี่ยวกับเรา</a>
+                        <div class="container">
+  
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" data-bs-toggle="modal" data-bs-target="#myModal">ติดต่องาน</a>
@@ -80,7 +84,7 @@
     <br>
     <br><br>
     <br><br>
-    <img src="image/logo.png" width="250" height="250"  alt="center" >
+    
     <section id="service" class="py-5">
         <div class="container">
             <div class="row">
@@ -188,10 +192,10 @@
                         </div>
                     </form>
                 </div>
-                <div class="modal-footer">
+              <div class="modal-footer">
                     <button class="btn btn-secondary" data-bs-dismiss="modal">ยกเลิก</button>
                     <button class="btn btn-success">ส่งข้อมูล</button>
-                </div>
+                </div>-->
             </div>
         </div>
     </div>
