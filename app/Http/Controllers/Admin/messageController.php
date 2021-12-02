@@ -5,10 +5,10 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Http\Requests;
 
-use App\Models\reportnumber;
+use App\Models\message;
 use Illuminate\Http\Request;
 
-class reportnumberController extends Controller
+class messageController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -21,16 +21,15 @@ class reportnumberController extends Controller
         $perPage = 25;
 
         if (!empty($keyword)) {
-            $reportnumber = reportnumber::where('id', 'LIKE', "%$keyword%")
-                ->orWhere('address', 'LIKE', "%$keyword%")
-                ->orWhere('detail', 'LIKE', "%$keyword%")
-                ->orWhere('status', 'LIKE', "%$keyword%")
+            $message = message::where('id', 'LIKE', "%$keyword%")
+                ->orWhere('addressmessage', 'LIKE', "%$keyword%")
+                ->orWhere('name', 'LIKE', "%$keyword%")
                 ->oldest()->paginate($perPage);
         } else {
-            $reportnumber = reportnumber::oldest()->paginate($perPage);
+            $message = message::oldest()->paginate($perPage);
         }
 
-        return view('admin.reportnumber.index', compact('reportnumber'));
+        return view('admin.message.index', compact('message'));
     }
 
     /**
@@ -40,7 +39,7 @@ class reportnumberController extends Controller
      */
     public function create()
     {
-        return view('admin.reportnumber.create');
+        return view('admin.message.create');
     }
 
     /**
@@ -55,9 +54,9 @@ class reportnumberController extends Controller
         
         $requestData = $request->all();
         
-        reportnumber::create($requestData);
+        message::create($requestData);
 
-        return redirect('admin/reportnumber')->with('flash_message', 'reportnumber added!');
+        return redirect('admin/message')->with('flash_message', 'message added!');
     }
 
     /**
@@ -69,9 +68,9 @@ class reportnumberController extends Controller
      */
     public function show($id)
     {
-        $reportnumber = reportnumber::findOrFail($id);
+        $message = message::findOrFail($id);
 
-        return view('admin.reportnumber.show', compact('reportnumber'));
+        return view('admin.message.show', compact('message'));
     }
 
     /**
@@ -83,9 +82,9 @@ class reportnumberController extends Controller
      */
     public function edit($id)
     {
-        $reportnumber = reportnumber::findOrFail($id);
+        $message = message::findOrFail($id);
 
-        return view('admin.reportnumber.edit', compact('reportnumber'));
+        return view('admin.message.edit', compact('message'));
     }
 
     /**
@@ -101,10 +100,10 @@ class reportnumberController extends Controller
         
         $requestData = $request->all();
         
-        $reportnumber = reportnumber::findOrFail($id);
-        $reportnumber->update($requestData);
+        $message = message::findOrFail($id);
+        $message->update($requestData);
 
-        return redirect('admin/reportnumber')->with('flash_message', 'reportnumber updated!');
+        return redirect('admin/message')->with('flash_message', 'message updated!');
     }
 
     /**
@@ -116,8 +115,8 @@ class reportnumberController extends Controller
      */
     public function destroy($id)
     {
-        reportnumber::destroy($id);
+        message::destroy($id);
 
-        return redirect('admin/reportnumber')->with('flash_message', 'reportnumber deleted!');
+        return redirect('admin/message')->with('flash_message', 'message deleted!');
     }
 }

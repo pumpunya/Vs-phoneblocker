@@ -39,3 +39,4 @@ Route::resource('admin/reportnumber', 'Admin\reportnumberController');
 
 Route::resource('admin/phone', 'Admin\PhoneController');
 Route::resource('admin/reportnumber', 'Admin\ReportnumberController');
+Route::resource('admin/message', 'Admin\messageController');
