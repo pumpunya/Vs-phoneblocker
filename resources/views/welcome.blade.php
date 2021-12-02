@@ -79,7 +79,7 @@
     <br>
     <br><br>
     <br><br>
-    
+    <img src="https://cdn-icons.flaticon.com/png/512/2574/premium/2574172.png?token=exp=1638431117~hmac=e7d9dcb14e68fb012232fc435127cee1" width= 80 height=100 class="img-fluid">
     <section id="service" class="py-5">
         <div class="container">
             <div class="row">
