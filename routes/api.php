@@ -26,3 +26,21 @@ Route::post('reportnumber', 'API\ReportnumberController@index');
 
 Route::post('AddReport', 'API\ReportnumberController@AddReport');
 Route::post('AddNumber', 'API\ReportnumberController@AddNumber');
+
+
+Route::get('user', 'API\UserController@index');
+Route::post('user', 'API\UserController@index');
+
+Route::post('user/login', 'API\UserController@login');
+Route::post('user', 'API\UserController@Register');
+Route::get('user/{id}', 'API\UserController@view');
+Route::put('user/{id}', 'API\UserController@update');
+Route::post('user/{id}', 'API\UserController@update');//fake update
+Route::put('user/{id}', 'API\UserController@updatepassword');
+
+Route::post('member/login', 'API\MemberController@login');
+Route::post('member', 'API\MemberController@Register');
+Route::get('member/{id}', 'API\MemberController@view');
+Route::put('member/{id}', 'API\MemberController@update');
+Route::post('member/{id}', 'API\MemberController@update');//fake update
+Route::put('member/{id}', 'API\MemberController@updatepassword');

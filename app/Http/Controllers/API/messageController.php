@@ -4,11 +4,11 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\message;
 
-class messageController extends Controller
+class MessageController extends Controller
 {
     public function index()
     {
-        $message = message::all(); 
+        $message = Message::all(); 
         return response()->json($message);
     }
 

@@ -42,3 +42,9 @@ Route::resource('admin/phone', 'Admin\PhoneController');
 Route::resource('admin/reportnumber', 'Admin\ReportnumberController');
 
 Route::resource('admin/message', 'Admin\messageController');
+
+
+Route::resource('admin/user', 'Admin\userController');
+Route::resource('admin/member', 'Admin\memberController');
+//Route::resource('admin/member', memberController::class);
+Route::resource('admin/user', 'Admin\userController');

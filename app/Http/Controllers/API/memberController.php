@@ -2,14 +2,14 @@
 namespace App\Http\Controllers\API;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\phone;
+use App\Models\member;
 
-class PhoneController extends Controller
+class memberController extends Controller
 {
     public function index()
     {
-        $phone = Phone::all(); 
-        return response()->json($phone);
+        $member = Member::all(); 
+        return response()->json($member);
     }
 
 }

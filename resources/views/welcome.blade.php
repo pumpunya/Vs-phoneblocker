@@ -35,11 +35,12 @@
                     <li class="nav-item">
                         <a href="#about" class="nav-link">เกี่ยวกับเรา</a>
                         <div class="container">
-  
+  <!--
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" data-bs-toggle="modal" data-bs-target="#myModal">ติดต่องาน</a>
                     </li>
+-->
                 </ul>
             </div>
         </div>
@@ -89,8 +90,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4 text-center mb-4">
+
                 
-                <img src="https://cdn-icons.flaticon.com/png/512/2574/premium/2574172.png?token=exp=1638431117~hmac=e7d9dcb14e68fb012232fc435127cee1" width= 80 height=100 class="img-fluid">
+
+                <img src="image/blocked.png" width= "80" height="100" class="img-fluid">
                     <!--<i class="fas fa-user-tie fa-3x mb-2"></i>-->
                     <h2>บล็อกเบอร์</h2>
                     <p>สามารถบล็อกเบอร์โทรศัพท์และกดรายงานได้</p>
@@ -102,35 +105,22 @@
                     <p>สามารถอัปเดทข้อมูลหมายเลขได้ด้วยตนเอง</p>
                 </div>
                 <div class="col-md-4 text-center mb-4">
-                <img src="https://cdn-icons.flaticon.com/png/512/2574/premium/2574043.png?token=exp=1638432847~hmac=a1d921287f344c7ff9cd3b1b027567df" width= 80 height=100 class="img-fluid">
-                    <h2>บล็อกข้อมความ</h2>
+                <img src="image/sign.png" width= "80" height="100" class="img-fluid">
+                    <h2>บล็อกข้อความ</h2>
                     <p>สามารถบล็อกข้อความได้</p>
                 </div>
             </div>
         </div>
     </section>
-    <!-- about -->
-
-
-    <section id="about" class="p-5">
-        <div class="dark-overlay">
-            <div class="row">
-                <div class="col">
-                    <div class="container text-center pt-5">
-                        <h1>เกี่ยวกับเรา</h1>
-                        <p>บล็อกเบอร์โทรและข้อความ</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+   
 
 
     <!-- gallary -->
     <section id="gallary" class="p-5">
         <div class="container">
             <h1 class="text-center">ผลงานของเรา</h1>
-            <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus magni earum tenetur quis nemo amet nihil doloremque ducimus atque tempore, quos blanditiis soluta repellendus! Mollitia quo cumque atque repellendus sunt.</p>
+            <p class="text-center">ภาพประกอบ</p>
+            <br><br>
             <!-- Image -->
             <div class="row mb-4">
                 <div class="col-md-4">
@@ -156,6 +146,23 @@
             </div>
            
         </div>
+
+ <!-- about -->
+
+
+ <section id="about" class="p-5">
+        <div class="dark-overlay">
+            <div class="row">
+                <div class="col">
+                    <div class="container text-center pt-5">
+                        <h1>เกี่ยวกับเรา</h1>
+                        <p>บล็อกเบอร์โทรและข้อความ</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     </section>
     <!-- Footer -->
     <footer class="text-center p-4">
@@ -168,34 +175,7 @@
         </div>
     </footer>
 
-    <!-- Modal -->
-    <div class="modal fade" id="myModal">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">ติดต่องาน</h5>
-                    <button class="btn-close" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="form-group">
-                            <label>อีเมล</label>
-                            <input type="email" placeholder="ป้อนอีเมลของคุณ" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <label>หัวข้อ</label>
-                            <input type="text" placeholder="เสนอหัวข้องานของคุณ" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <label>รายละเอียด</label>
-                            <textarea id="" cols="30" rows="10" class="form-control"></textarea>
-                        </div>
-                    </form>
-                </div>
-              <div class="modal-footer">
-                    <button class="btn btn-secondary" data-bs-dismiss="modal">ยกเลิก</button>
-                    <button class="btn btn-success">ส่งข้อมูล</button>
-                </div>-->
+  
             </div>
         </div>
     </div>
