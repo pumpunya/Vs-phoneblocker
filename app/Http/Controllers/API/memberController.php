@@ -12,5 +12,36 @@ class memberController extends Controller
         return response()->json($member);
     }
 
+
+    public function AddMember(Request $request)
+    {
+     
+            //add AddMember
+            $member = new member();
+            $member->username = $request->get("username"); 
+            $member->password = $request->get("password");  
+            $member->package  = 0;
+            $member->save();
+           
+          //soft delete
+          return response()->json(array(
+            'message' => 'AddMember successfully', 
+            'status' => 'true'));
+    }
+    public function Addusername(Request $request)
+    {
+     
+            //add AddMember
+            $member = new member();
+            $member->username = $request->get("username"); 
+            $member->password = $request->get("password");  
+            $member->package  = 1;
+            $member->save();
+           
+          //soft delete
+          return response()->json(array(
+            'message' => 'Addusername successfully', 
+            'status' => 'true'));
+    }
 }
 

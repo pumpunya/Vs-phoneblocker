@@ -21,6 +21,9 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::get('phone', 'API\PhoneController@index');
 Route::post('phone', 'API\PhoneController@index');
 
+Route::get('message', 'API\MessageController@index');
+Route::post('message', 'API\MessageController@index');
+
 Route::get('reportnumber', 'API\ReportnumberController@index');
 Route::post('reportnumber', 'API\ReportnumberController@index');
 
@@ -37,6 +40,12 @@ Route::get('user/{id}', 'API\UserController@view');
 Route::put('user/{id}', 'API\UserController@update');
 Route::post('user/{id}', 'API\UserController@update');//fake update
 Route::put('user/{id}', 'API\UserController@updatepassword');
+
+Route::get('member', 'API\MemberController@index');
+Route::post('member', 'API\MemberController@index');
+Route::post('member', 'API\MemberController@AddMember');
+Route::post('member', 'API\MemberController@Addusername');
+
 
 Route::post('member/login', 'API\MemberController@login');
 Route::post('member', 'API\MemberController@Register');
