@@ -47,8 +47,8 @@ Route::post('member', 'API\MemberController@AddMember');
 Route::post('member', 'API\MemberController@Addusername');
 
 
-Route::post('member/login', 'API\MemberController@login');
-Route::post('member', 'API\MemberController@Register');
+Route::post('member/login', 'API\memberController@login');
+Route::post('member', 'API\memberController@Register');
 Route::get('member/{id}', 'API\MemberController@view');
 Route::put('member/{id}', 'API\MemberController@update');
 Route::post('member/{id}', 'API\MemberController@update');//fake update

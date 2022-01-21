@@ -13,14 +13,16 @@ class memberController extends Controller
     }
 
 
-    public function AddMember(Request $request)
+    public function Register(Request $request)
     {
      
-            //add AddMember
+            //add Register
             $member = new member();
-            $member->username = $request->get("username"); 
+            $member->email = $request->get("email"); 
+            $member->name = $request->get("name"); 
             $member->password = $request->get("password");  
             $member->package  = 0;
+            $member->free_trial = $request->get("free_trial");
             $member->save();
            
           //soft delete
@@ -33,15 +35,35 @@ class memberController extends Controller
      
             //add AddMember
             $member = new member();
-            $member->username = $request->get("username"); 
+            $member->email = $request->get("email"); 
+            $member->name = $request->get("name"); 
             $member->password = $request->get("password");  
-            $member->package  = 1;
+            $member->package  = 0;
+            $member->free_trial = $request->get("free_trial");
             $member->save();
            
           //soft delete
           return response()->json(array(
             'message' => 'Addusername successfully', 
             'status' => 'true'));
+    }
+    public function login(Request $request)
+    {
+        $email = $request->get('email');
+        $password = $request->get('password');
+        $member = member::login($email,$password);
+        if($member){
+            $member = (array)$member;
+            $member['message'] = 'success';
+            $member['status'] = 'true';    
+                
+        }else{
+            $member = array(
+                'message' => 'this member is not found', 
+                'status' => 'false');
+        }
+
+        return response()->json($member);
     }
 }
 

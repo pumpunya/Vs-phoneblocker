@@ -22,9 +22,11 @@ class memberController extends Controller
 
         if (!empty($keyword)) {
             $member = member::where('id', 'LIKE', "%$keyword%")
-                ->orWhere('username', 'LIKE', "%$keyword%")
+                ->orWhere('email', 'LIKE', "%$keyword%")
+                ->orWhere('name', 'LIKE', "%$keyword%")
                 ->orWhere('password', 'LIKE', "%$keyword%")
                 ->orWhere('package', 'LIKE', "%$keyword%")
+                ->orWhere('free_trial', 'LIKE', "%$keyword%")
                 ->latest()->paginate($perPage);
         } else {
             $member = member::latest()->paginate($perPage);

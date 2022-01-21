@@ -3,10 +3,15 @@
     <input class="form-control" name="id" type="number" id="id" value="{{ isset($member->id) ? $member->id : ''}}" >
     {!! $errors->first('id', '<p class="help-block">:message</p>') !!}
 </div>
-<div class="form-group {{ $errors->has('username') ? 'has-error' : ''}}">
-    <label for="username" class="control-label">{{ 'Username' }}</label>
-    <input class="form-control" name="username" type="text" id="username" value="{{ isset($member->username) ? $member->username : ''}}" >
-    {!! $errors->first('username', '<p class="help-block">:message</p>') !!}
+<div class="form-group {{ $errors->has('email') ? 'has-error' : ''}}">
+    <label for="email" class="control-label">{{ 'Email' }}</label>
+    <input class="form-control" name="email" type="text" id="email" value="{{ isset($member->email) ? $member->email : ''}}" >
+    {!! $errors->first('email', '<p class="help-block">:message</p>') !!}
+</div>
+<div class="form-group {{ $errors->has('name') ? 'has-error' : ''}}">
+    <label for="name" class="control-label">{{ 'Name' }}</label>
+    <input class="form-control" name="name" type="text" id="name" value="{{ isset($member->name) ? $member->name : ''}}" >
+    {!! $errors->first('name', '<p class="help-block">:message</p>') !!}
 </div>
 <div class="form-group {{ $errors->has('password') ? 'has-error' : ''}}">
     <label for="password" class="control-label">{{ 'Password' }}</label>
@@ -17,6 +22,11 @@
     <label for="package" class="control-label">{{ 'Package' }}</label>
     <input class="form-control" name="package" type="number" id="package" value="{{ isset($member->package) ? $member->package : ''}}" >
     {!! $errors->first('package', '<p class="help-block">:message</p>') !!}
+</div>
+<div class="form-group {{ $errors->has('free_trial') ? 'has-error' : ''}}">
+    <label for="free_trial" class="control-label">{{ 'Free Trial' }}</label>
+    <input class="form-control" name="free_trial" type="text" id="free_trial" value="{{ isset($member->free_trial) ? $member->free_trial : ''}}" >
+    {!! $errors->first('free_trial', '<p class="help-block">:message</p>') !!}
 </div>
 
 

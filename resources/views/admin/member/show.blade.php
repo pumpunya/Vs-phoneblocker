@@ -27,7 +27,14 @@
                                     <tr>
                                         <th>ID</th><td>{{ $member->id }}</td>
                                     </tr>
-                                    <tr><th> Id </th><td> {{ $member->id }} </td></tr><tr><th> Username </th><td> {{ $member->username }} </td></tr><tr><th> Password </th><td> {{ $member->password }} </td></tr>
+                                    <tr><th> Id </th><td> {{ $member->id }} </td></tr>
+                                    <tr><th> Email </th><td> {{ $member->email }} </td></tr>
+                                    <tr><th> Name </th><td> {{ $member->name }} </td></tr>
+                                    <tr><th> Password </th><td> {{ $member->password }} </td></tr>
+                                    <tr><th> Package </th><td> {{ $member->package }} </td></tr>
+                                    <tr><th> Free_trial </th><td> {{ $member->free_trial }} </td></tr>
+
+                    
                                 </tbody>
                             </table>
                         </div>
