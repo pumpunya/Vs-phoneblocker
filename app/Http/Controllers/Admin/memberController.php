@@ -27,9 +27,10 @@ class memberController extends Controller
                 ->orWhere('password', 'LIKE', "%$keyword%")
                 ->orWhere('package', 'LIKE', "%$keyword%")
                 ->orWhere('free_trial', 'LIKE', "%$keyword%")
-                ->latest()->paginate($perPage);
+                ->orWhere('exp_date', 'LIKE', "%$keyword%")
+                ->oldest()->paginate($perPage);
         } else {
-            $member = member::latest()->paginate($perPage);
+            $member = member::oldest()->paginate($perPage);
         }
 
         return view('admin.member.index', compact('member'));

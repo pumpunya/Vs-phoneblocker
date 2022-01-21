@@ -25,7 +25,7 @@ class member extends Model
      *
      * @var array
      */
-    protected $fillable = ['id', 'email', 'name', 'password', 'package', 'free_trial'];
+    protected $fillable = ['id', 'email', 'name', 'password', 'package', 'free_trial','exp_date'];
 
     
 }

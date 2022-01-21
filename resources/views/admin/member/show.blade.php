@@ -25,15 +25,15 @@
                             <table class="table">
                                 <tbody>
                                     <tr>
-                                        <th>ID</th><td>{{ $member->id }}</td>
+                                     
                                     </tr>
                                     <tr><th> Id </th><td> {{ $member->id }} </td></tr>
                                     <tr><th> Email </th><td> {{ $member->email }} </td></tr>
                                     <tr><th> Name </th><td> {{ $member->name }} </td></tr>
-                                    <tr><th> Password </th><td> {{ $member->password }} </td></tr>
+                                   
                                     <tr><th> Package </th><td> {{ $member->package }} </td></tr>
                                     <tr><th> Free_trial </th><td> {{ $member->free_trial }} </td></tr>
-
+                                    <tr><th> Exp_date </th><td> {{ $member->exp_date }} </td></tr>
                     
                                 </tbody>
                             </table>

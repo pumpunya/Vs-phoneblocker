@@ -30,19 +30,20 @@
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th>#</th><th>Id</th><th>Email</th><th>Name</th><th>Password</th><th>package</th><th>free_trial</th><th>Actions</th>
+                                        <th>Id</th><th>Email</th><th>Name</th><th>package</th><th>free_trial</th><th>exp_date</th><th>Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                 @foreach($member as $item)
                                     <tr>
-                                        <td>{{ $loop->iteration }}</td>
+                                       
                                         <td>{{ $item->id }}</td>
                                         <td>{{ $item->email }}</td>
                                         <td>{{ $item->name }}</td>
-                                        <td>{{ $item->password }}</td>
+                                      
                                         <td>{{ $item->package }}</td>
                                         <td>{{ $item->free_trial }}</td>
+                                        <td>{{ $item->exp_date }}</td>
                                         <td>
                                             <a href="{{ url('/admin/member/' . $item->id) }}" title="View member"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a>
                                             <a href="{{ url('/admin/member/' . $item->id . '/edit') }}" title="Edit member"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button></a>
