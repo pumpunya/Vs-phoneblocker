@@ -30,23 +30,7 @@ class memberController extends Controller
             'message' => 'AddMember successfully', 
             'status' => 'true'));
     }
-    public function Addusername(Request $request)
-    {
-     
-            //add AddMember
-            $member = new member();
-            $member->email = $request->get("email"); 
-            $member->name = $request->get("name"); 
-            $member->password = $request->get("password");  
-            $member->package  = 0;
-            $member->free_trial = $request->get("free_trial");
-            $member->save();
-           
-          //soft delete
-          return response()->json(array(
-            'message' => 'Addusername successfully', 
-            'status' => 'true'));
-    }
+
     public function login(Request $request)
     {
         $email = $request->get('email');
