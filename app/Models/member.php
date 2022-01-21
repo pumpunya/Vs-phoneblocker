@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use DB;
 
 class member extends Model
 {
@@ -28,4 +29,12 @@ class member extends Model
     protected $fillable = ['id', 'email', 'name', 'password', 'package', 'free_trial','exp_date'];
 
     
+    public static function login($email,$password)
+    {
+        return DB::table('member')
+                ->select('*')
+                ->where('email', $email)
+                ->Where('password', $password)
+                ->first();
+    }
 }
