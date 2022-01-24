@@ -19,7 +19,7 @@ class memberController extends Controller
             //add Register
             $member = new member();
             $member->email = $request->get("email"); 
-            $member->name = $request->get("username"); 
+            $member->username = $request->get("username"); 
             $member->password = $request->get("password");  
             $member->package  = 0;
             $member->free_trial = 0;
