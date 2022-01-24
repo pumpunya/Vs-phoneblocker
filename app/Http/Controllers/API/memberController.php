@@ -3,7 +3,7 @@ namespace App\Http\Controllers\API;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\member;
-
+use DB;
 class memberController extends Controller
 {
     public function index()
@@ -48,6 +48,13 @@ class memberController extends Controller
                 'status' => 'false');
         }
 
+        return response()->json($member);
+    }
+
+    public function viewMember($id)
+    {
+        $sql="SELECT * FROM member WHERE member.id='$id'";
+        $member=DB::select($sql)[0];        
         return response()->json($member);
     }
 
