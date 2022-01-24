@@ -23,6 +23,7 @@ class memberController extends Controller
             $member->password = $request->get("password");  
             $member->package  = 0;
             $member->free_trial = 0;
+            //$member->exp_date = 0;
             $member->save();
            
           //soft delete

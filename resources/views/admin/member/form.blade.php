@@ -9,10 +9,10 @@
     <input class="form-control" name="email" type="text" id="email" value="{{ isset($member->email) ? $member->email : ''}}" >
     {!! $errors->first('email', '<p class="help-block">:message</p>') !!}
 </div>
-<div class="form-group {{ $errors->has('name') ? 'has-error' : ''}}">
-    <label for="name" class="control-label">{{ 'Name' }}</label>
-    <input class="form-control" name="name" type="text" id="name" value="{{ isset($member->name) ? $member->name : ''}}" >
-    {!! $errors->first('name', '<p class="help-block">:message</p>') !!}
+<div class="form-group {{ $errors->has('username') ? 'has-error' : ''}}">
+    <label for="username" class="control-label">{{ 'Username' }}</label>
+    <input class="form-control" name="username" type="text" id="username" value="{{ isset($member->username) ? $member->username : ''}}" >
+    {!! $errors->first('username', '<p class="help-block">:username</p>') !!}
 </div>
 <div class="form-group {{ $errors->has('password') ? 'has-error' : ''}}">
     <label for="password" class="control-label">{{ 'Password' }}</label>

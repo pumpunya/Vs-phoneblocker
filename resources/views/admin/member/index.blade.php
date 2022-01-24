@@ -30,7 +30,7 @@
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th>Id</th><th>Email</th><th>Name</th><th>package</th><th>free_trial</th><th>exp_date</th><th>Actions</th>
+                                        <th>Id</th><th>Email</th><th>Username</th><th>package</th><th>free_trial</th><th>exp_date</th><th>Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -39,7 +39,7 @@
                                        
                                         <td>{{ $item->id }}</td>
                                         <td>{{ $item->email }}</td>
-                                        <td>{{ $item->name }}</td>
+                                        <td>{{ $item->username }}</td>
                                       
                                         <td>{{ $item->package }}</td>
                                         <td>{{ $item->free_trial }}</td>
