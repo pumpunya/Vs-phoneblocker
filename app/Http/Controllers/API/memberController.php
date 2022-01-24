@@ -19,7 +19,7 @@ class memberController extends Controller
             //add Register
             $member = new member();
             $member->email = $request->get("email"); 
-            $member->name = $request->get("name"); 
+            $member->name = $request->get("username"); 
             $member->password = $request->get("password");  
             $member->package  = 0;
             $member->free_trial = 0;
@@ -33,7 +33,7 @@ class memberController extends Controller
 
     public function login(Request $request)
     {
-        $email = $request->get('email');
+        $email = $request->get('username');
         $password = $request->get('password');
         $member = member::login($email,$password);
         if($member){

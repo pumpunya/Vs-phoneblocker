@@ -26,14 +26,14 @@ class member extends Model
      *
      * @var array
      */
-    protected $fillable = ['id', 'email', 'name', 'password', 'package', 'free_trial','exp_date'];
+    protected $fillable = ['id', 'email', 'username', 'password', 'package', 'free_trial','exp_date'];
 
     
     public static function login($email,$password)
     {
         return DB::table('member')
                 ->select('*')
-                ->where('email', $email)
+                ->where('username', $email)
                 ->Where('password', $password)
                 ->first();
     }
