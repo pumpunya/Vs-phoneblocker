@@ -23,7 +23,7 @@ class memberController extends Controller
             $member->password = $request->get("password");  
             $member->package  = 0;
             $member->free_trial = 0;
-            //$member->exp_date = 0;
+            $member->exp_date = "";
             $member->save();
            
           //soft delete
@@ -50,12 +50,30 @@ class memberController extends Controller
 
         return response()->json($member);
     }
-    
+
     public function viewMember($id)
     {
         $sql="SELECT * FROM member WHERE member.id='$id'";
         $member=DB::select($sql)[0];        
         return response()->json($member);
     }
+
+    public function updatemember(Request $request,$id)
+    {
+     
+            $member = member::find($id);
+            $member->email = $request->get("email"); 
+            $member->username = $request->get("username"); 
+            $member->password = $request->get("password");  
+            $member->package  = 1; 
+            $member->free_trial = 1;
+            $member->exp_date =Date('y:m:d', strtotime('+30 days'));
+            $member->save();
+           
+          return response()->json(array(
+            'message' => 'Update successfully', 
+            'status' => 'true'));
+    }
+   
 }
 
