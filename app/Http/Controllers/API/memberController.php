@@ -50,5 +50,12 @@ class memberController extends Controller
 
         return response()->json($member);
     }
+    
+    public function viewMember($id)
+    {
+        $sql="SELECT * FROM member WHERE member.id='$id'";
+        $member=DB::select($sql)[0];        
+        return response()->json($member);
+    }
 }
 
