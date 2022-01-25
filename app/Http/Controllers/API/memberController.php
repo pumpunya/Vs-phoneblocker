@@ -50,25 +50,5 @@ class memberController extends Controller
 
         return response()->json($member);
     }
-
-    public function update(Request $request, $id)
-    {
-    $member =member($id);
-    $member->email = $request->get("email"); 
-    $member->username = $request->get("username"); 
-    $member->password = $request->get("password");  
-    $member->package  = 1;
-    $member = free_trial()->format('Y-m-d H:i:s');
-    //date_create('now')->format('Y-m-d H:i:s')
-    //$member->free_trial = 0;
-    //$member->exp_date = 0;s
-    $member->save();
-   
-    
-  return response()->json(array(
-    'message' => 'Update a member successfully', 
-    'status' => 'true'));
-    }
-
 }
 
