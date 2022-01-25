@@ -58,30 +58,17 @@ class memberController extends Controller
     $member->username = $request->get("username"); 
     $member->password = $request->get("password");  
     $member->package  = 1;
-    $free_trial= date_create('now', timezone_open('Asia/Bangkok'))->format('Y-m-d H:i:s');
-    echo $free_trial;
-
-
-    $chang = DB::select($spl)[0];
-    if($chang ->exp_date =$free_trial){
-        return response()->json(array());
-    }
-    else
-    $chang = $chang ->exp_date1 +30;
+    $member = free_trial()->format('Y-m-d H:i:s');
+    //date_create('now')->format('Y-m-d H:i:s')
+    //$member->free_trial = 0;
+    //$member->exp_date = 0;s
     $member->save();
- 
    
     
   return response()->json(array(
     'message' => 'Update a member successfully', 
     'status' => 'true'));
     }
-
-   /* public function __construct()
-    {
-        $member->free_trial = new DateTime('now');
-    }
-*/
 
 }
 
