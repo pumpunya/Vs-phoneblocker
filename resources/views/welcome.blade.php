@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,6 +27,7 @@
             <div id="navbar1" class="collapse navbar-collapse">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
+                                      
                         
                         <a href="login" class="nav-link">Login</a>
                     </li>
@@ -92,7 +94,6 @@
                 <div class="col-md-4 text-center mb-4">
 
                 
-
                 <img src="image/blocked.png" width= "80" height="100" class="img-fluid">
                     <!--<i class="fas fa-user-tie fa-3x mb-2"></i>-->
                     <h2>บล็อกเบอร์</h2>
@@ -118,6 +119,7 @@
     <!-- gallary -->
     <section id="gallary" class="p-5">
         <div class="container">
+            
             <h1 class="text-center">ผลงานของเรา</h1>
             <p class="text-center">ภาพประกอบ</p>
             <br><br>

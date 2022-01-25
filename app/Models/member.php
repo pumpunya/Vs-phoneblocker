@@ -37,4 +37,5 @@ class member extends Model
                 ->Where('password', $password)
                 ->first();
     }
+    
 }
