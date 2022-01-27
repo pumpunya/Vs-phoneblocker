@@ -61,14 +61,33 @@ class memberController extends Controller
 
     public function updatemember($id)
     {
-     
+
             $member = member::find($id);
-    
             $member->package  = 1; 
             $member->free_trial = 1;
-            $member->exp_date =Date('Y-m-d');
+            $member->exp_date =Date('Y-m-d',strtotime(' +30 day'));
             $member->save();
            
+          return response()->json(array(
+            'message' => 'Update successfully', 
+            'status' => 'true'));
+    }
+
+    public function updatememberExp($id)//หมดอายุ
+    {
+        date_default_timezone_set('Asia/Bangkok');
+        $sql="SELECT *  FROM member WHERE id = $id" ;
+        $datarequest=DB::select($sql)[0];
+        $dateNow = Date('Y-m-d');
+        if(($datarequest->exp_date) <= $dateNow){
+            $member = member::find($id);
+            $member->package  = 0; 
+            $member->free_trial = 1;
+            $member->exp_date =null;
+            $member->save();
+        }
+     
+        
           return response()->json(array(
             'message' => 'Update successfully', 
             'status' => 'true'));
