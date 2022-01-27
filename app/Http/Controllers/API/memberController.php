@@ -75,6 +75,7 @@ class memberController extends Controller
 
     public function updatememberExp($id)//หมดอายุ
     {
+        $exp =false;
         date_default_timezone_set('Asia/Bangkok');
         $sql="SELECT *  FROM member WHERE id = $id" ;
         $datarequest=DB::select($sql)[0];
@@ -85,12 +86,13 @@ class memberController extends Controller
             $member->free_trial = 1;
             $member->exp_date =null;
             $member->save();
+            $exp=true;
         }
      
         
           return response()->json(array(
             'message' => 'Update successfully', 
-            'status' => 'true'));
+            'status' => $exp));
     }
    
 }
