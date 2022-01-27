@@ -53,5 +53,6 @@ Route::get('member/{id}', 'API\memberController@view');
 
 //Route::put('updatemember/{id}', 'API\memberController@update');
 Route::post('updatemember/{id}', 'API\memberController@updatemember');//fake update
+Route::post('updatememberExp/{id}', 'API\memberController@updatememberExp');
 
 Route::get('viewMember/{id}', 'API\memberController@viewMember');
