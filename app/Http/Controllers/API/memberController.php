@@ -59,16 +59,14 @@ class memberController extends Controller
         return response()->json($member);
     }
 
-    public function updatemember(Request $request,$id)
+    public function updatemember($id)
     {
      
             $member = member::find($id);
-            $member->email = $request->get("email"); 
-            $member->username = $request->get("username"); 
-            $member->password = $request->get("password");  
+    
             $member->package  = 1; 
             $member->free_trial = 1;
-            $member->exp_date =Date('y:m:d', strtotime('+30 days'));
+            $member->exp_date =Date('Y-m-d');
             $member->save();
            
           return response()->json(array(
