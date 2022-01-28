@@ -95,5 +95,27 @@ class memberController extends Controller
             'status' => $exp));
     }
    
+    public function updatedaymember($id,$f)
+    {
+            if($f = 0){
+            $member = member::find($id);
+            $member->package  = 1; 
+            $member->free_trial = 1;
+            $member->exp_date =Date('Y-m-d',strtotime('+1 year'));
+            $member->save();
+
+        }
+        else if($f =1){
+            $member = member::find($id);
+            $member->package  = 1; 
+            $member->free_trial = 1;
+            $member->exp_date =Date('Y-m-d',strtotime('+1 month'));
+            $member->save();
+        }
+          return response()->json(array(
+            'message' => 'Updatedat successfully', 
+            'status' => 'true'));
+    }
+   
 }
 
