@@ -51,10 +51,9 @@ Route::post('member/login', 'API\memberController@login');
 Route::post('member', 'API\memberController@Register');
 Route::get('member/{id}', 'API\memberController@view');
 
-//Route::put('updatemember/{id}', 'API\memberController@update');
 Route::post('updatemember/{id}', 'API\memberController@updatemember');//fake update
 Route::post('updatememberExp/{id}', 'API\memberController@updatememberExp');
-Route::post('updatedaymember/{id}/{f}', 'API\memberController@updatedaymember');
+Route::post('updatedaymember/{id}/{f}', 'API\memberController@updatedaymember');//f 0 = 1ปี  f 1 = 1เดือน
 
 Route::get('viewMember/{id}', 'API\memberController@viewMember');
 

@@ -61,7 +61,7 @@ class memberController extends Controller
 
     public function updatemember($id)
     {
-
+        date_default_timezone_set('Asia/Bangkok');
             $member = member::find($id);
             $member->package  = 1; 
             $member->free_trial = 1;
@@ -95,8 +95,10 @@ class memberController extends Controller
             'status' => $exp));
     }
    
-    public function updatedaymember($id,$f)
+    public function updatedaymember($id,$f)//f 0 = 1ปี  f 1 = 1เดือน
     {
+        date_default_timezone_set('Asia/Bangkok');
+
             if($f == 0){
             $member = member::find($id);
             $member->package  = 1; 
@@ -109,9 +111,10 @@ class memberController extends Controller
             $member = member::find($id);
             $member->package  = 1; 
             $member->free_trial = 1;
-            $member->exp_date =Date('Y-m-d',strtotime('+1 months'));
+            $member->exp_date =Date('Y-m-d',strtotime('+1 month'));
             $member->save();
         }
+        
           return response()->json(array(
             'message' => 'Updatedat successfully', 
             'status' => 'true'));
