@@ -97,7 +97,8 @@ class memberController extends Controller
    
     public function updatedaymember($id,$f)
     {
-            if($f = 0){
+    
+            if($f == 0){    
             $member = member::find($id);
             $member->package  = 1; 
             $member->free_trial = 1;
@@ -113,8 +114,8 @@ class memberController extends Controller
             $member->save();
         }
           return response()->json(array(
-            'message' => 'Updatedat successfully', 
-            'status' => 'true'));
+             'message' => 'Updatedat successfully', 
+             'status' => 'true'));
     }
    
 }
