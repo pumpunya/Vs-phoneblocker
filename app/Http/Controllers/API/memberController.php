@@ -61,7 +61,7 @@ class memberController extends Controller
 
     public function updatemember($id)
     {
-
+        date_default_timezone_set('Asia/Bangkok');
             $member = member::find($id);
             $member->package  = 1; 
             $member->free_trial = 1;
@@ -95,10 +95,16 @@ class memberController extends Controller
             'status' => $exp));
     }
    
-    public function updatedaymember($id,$f)
+    public function updatedaymember($id,$f)//f 0 = 1ปี  f 1 = 1เดือน
     {
+<<<<<<< HEAD
     
             if($f == 0){    
+=======
+        date_default_timezone_set('Asia/Bangkok');
+
+            if($f == 0){
+>>>>>>> d22f31ae1ce2504b022e7f93e2331f11a6ed3808
             $member = member::find($id);
             $member->package  = 1; 
             $member->free_trial = 1;
@@ -106,13 +112,14 @@ class memberController extends Controller
             $member->save();
 
         }
-        else if($f =1){
+       if($f ==1){
             $member = member::find($id);
             $member->package  = 1; 
             $member->free_trial = 1;
             $member->exp_date =Date('Y-m-d',strtotime('+1 month'));
             $member->save();
         }
+        
           return response()->json(array(
              'message' => 'Updatedat successfully', 
              'status' => 'true'));
