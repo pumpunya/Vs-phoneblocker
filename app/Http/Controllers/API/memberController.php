@@ -24,7 +24,7 @@ class memberController extends Controller
             $member->password = $request->get("password");  
             $member->package  = 0;
             $member->free_trial = 0;
-            $member->exp_date = "";
+            //$member->exp_date = "";
             $member->save();
            
           //soft delete
@@ -97,14 +97,11 @@ class memberController extends Controller
    
     public function updatedaymember($id,$f)//f 0 = 1ปี  f 1 = 1เดือน
     {
-<<<<<<< HEAD
-    
-            if($f == 0){    
-=======
+
         date_default_timezone_set('Asia/Bangkok');
 
             if($f == 0){
->>>>>>> d22f31ae1ce2504b022e7f93e2331f11a6ed3808
+
             $member = member::find($id);
             $member->package  = 1; 
             $member->free_trial = 1;
