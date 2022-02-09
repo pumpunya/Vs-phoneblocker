@@ -99,8 +99,7 @@ class memberController extends Controller
     {
 
         date_default_timezone_set('Asia/Bangkok');
-
-            if($f == 0){
+            if($f == 0){    
 
             $member = member::find($id);
             $member->package  = 1; 
